@@ -81,10 +81,4 @@ class CalcController {
 
     }
 
-
-
-
-
-
-
 }
