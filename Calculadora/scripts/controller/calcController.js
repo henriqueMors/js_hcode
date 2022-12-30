@@ -14,7 +14,7 @@ class CalcController {
         
         dateEl.innerHTML = '4/5/67'
         displayCalcEl.innerHTML = '4567'
-        timeEl.innerHTML = '45:673'
+        timeEl.innerHTML = '23:59'
     }
 
     get displayCalc(){
