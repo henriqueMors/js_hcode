@@ -1,10 +1,14 @@
-class CalcController {
+// MVC - ANTIGAMENTE OS DADOS ERAM TODOS AGRUPADOS EM UM LUGAR SÓ, MVC CHEGOU PARA ORGANIZAR
+//MODEL - TRATA OS DADOS, VERIFICA SE O USER TEM PERMISSÃO
+//VIEW - INTERFACE INTERAGIVEL
+//CONTROLLER - REGRAS DE CONTROLE
 
-    constructor(){
-        this._audio = new Audio('click.mp3');
+class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
+
+    constructor(){ //VARIAVEIS E FUNÇÕES QUE AGORA SE CHAMAM ATRIBUTOS E MÉTODOS
+        this._audio = new Audio('click.mp3'); 
         this._lastOperator = '';
         this._lastNumber = '';
-
         this._operation = [];
         this._locale = 'pt-BR';
         this._displayCalcEl = document.querySelector('#display');
