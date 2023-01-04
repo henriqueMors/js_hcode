@@ -6,8 +6,8 @@
 class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     constructor(){ //VARIAVEIS E FUNÇÕES QUE AGORA SE CHAMAM ATRIBUTOS E MÉTODOS
-        this._audio = new Audio('click.mp3'); 
-        this._lastOperator = '';
+        this._audio = new Audio('click.mp3'); //THIS FAZ A REFERENCIA AO OBJETO, É COMO SE FOSSE UM VAR/LET, MAS É UM ATRIBUTO
+        this._lastOperator = ''; // O underline É UMA FORMA DE EMCAPSULAMENTO, PROTEGER OS DADOS
         this._lastNumber = '';
         this._operation = [];
         this._locale = 'pt-BR';
@@ -19,6 +19,8 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         this.initButtonsEvents();
         this.initKeyboard();
     }
+
+
 
     pasteFromClipboard() {
 
