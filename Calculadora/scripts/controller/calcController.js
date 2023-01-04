@@ -42,7 +42,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     }
 
-    initialize(){
+    initialize(){ // RECEBE TODAS AS FUNÇOES INICIAIS
 
         this.setDisplayDateTime();
         
