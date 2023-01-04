@@ -7,7 +7,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     constructor(){ //VARIAVEIS E FUNÇÕES QUE AGORA SE CHAMAM ATRIBUTOS E MÉTODOS
         this._audio = new Audio('click.mp3'); //THIS FAZ A REFERENCIA AO OBJETO, É COMO SE FOSSE UM VAR/LET, MAS É UM ATRIBUTO
-        this._lastOperator = ''; // O underline É UMA FORMA DE EMCAPSULAMENTO, PROTEGER OS DADOS
+        this._lastOperator = ''; // O underline É UMA FORMA DE EMCAPSULAMENTO (PRIVATE), PROTEGER OS DADOS
         this._lastNumber = '';
         this._operation = [];
         this._locale = 'pt-BR';
@@ -428,13 +428,13 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     }
 
-    get displayCalc(){
+    get displayCalc(){ // MÉTODO GETTERS - RETORNA O VALOR DO ATRIBUTO ENCAPSULADO
 
         return this._displayCalcEl.innerHTML;
 
     }
 
-    set displayCalc(value){
+    set displayCalc(value){ // MÉTODO SETTERS - AUTORIZA A ALTERAÇÃO DO ATRIBUTO / ATRIBUI VALOR
 
         if (value.toString().length > 10) {
             this.setError();
