@@ -11,7 +11,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         this._lastNumber = '';
         this._operation = [];
         this._locale = 'pt-BR';
-        this._displayCalcEl = document.querySelector('#display');
+        this._displayCalcEl = document.querySelector('#display'); // QUERYSELECTOR PARA SELECIONAR ITEM COMO O GETELEMENT
         this._dateEl = document.querySelector('#date');
         this._timeEl = document.querySelector('#hour');
         this._currentDate;
@@ -19,8 +19,6 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         this.initButtonsEvents();
         this.initKeyboard();
     }
-
-
 
     pasteFromClipboard() {
 
@@ -378,7 +376,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     initButtonsEvents(){
 
-        let buttons = document.querySelectorAll('#buttons > g, #parts > g');
+        let buttons = document.querySelectorAll('#buttons > g, #parts > g'); // QUERYSELECTORALL SELECIONA TODOS OS G`S QUE ESTÃO DENTRO DE BUTTONS
             
             buttons.forEach((btn, index) => {
                 this.addEventListenerAll(btn, 'click drag', e => {
