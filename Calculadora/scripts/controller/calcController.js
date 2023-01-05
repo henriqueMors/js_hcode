@@ -44,13 +44,13 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     initialize(){ // RECEBE TODAS AS FUNÇOES INICIAIS
 
-        this.setDisplayDateTime();
+        this.setDisplayDateTime(); //A HORA VAI AQUI PARA JÁ INICIAR AO CCARREGAR A CALC
         
-        setInterval(() => {
+        setInterval(() => { // SETINTERVAL FAZ EXECUTAR ALGO DE FORMA INTERMITENTE
 
             this.setDisplayDateTime();
             
-        }, 1000);
+        }, 1000); // ESSE É O PARAMENTRO DE MILISEGUNDOS
 
         this.setLastNumberToDisplay();
         this.pasteFromClipboard();
@@ -62,6 +62,8 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         })
 
     }
+
+    // settimeout faz o método parar a partir de um determinado tempo
 
     toggleAudio(){
 
@@ -393,20 +395,20 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
 
 
-    setDisplayDateTime(){
+    setDisplayDateTime(){ //TRABALHANDO COM DATAS 'dir(new Date)' NO CONSOLE TE RETORNA TODAS AS FUNÇÕES
 
         this.displayDate = this.currentDate.toLocaleDateString(this._locale,{
             day: '2-digit',
             month: 'short',
             year: '2-digit'
-        });
+        });// APÓS ABRIR CHAVES, VOCE PODE FORMATAR DATA E HORA
         this.displayTime = this.currentDate.toLocaleTimeString(this._locale);
 
     }
 
     get displayTime(){
 
-        return this._timeEl.innerHTML;
+        return this._timeEl.innerHTML; // INNERHTML VAI FAZER ALTERAÇÃO NO CONTEUDO DE UMA HTML
 
     }
 
@@ -445,13 +447,13 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     }
 
-    get currentDate(){
+    get currentDate(){ //GETTER NAO TEM VALOR, MAS TEM RETURN
 
         return new Date();
 
     }
 
-    set currentDate(value){
+    set currentDate(value){ // SETTER TEM VALOR, MAS NAO TEM RETURN
 
         this._currentDate = value;
 
