@@ -130,7 +130,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     }
 
-    addEventListenerAll(element, events, fn){
+    addEventListenerAll(element, events, fn){ // SÃO ESCUTAS DE EVENTO `MOUSE, TECLADO`
 
         events.split(' ').forEach(event  => {
             element.addEventListener(event, fn, false);
@@ -378,20 +378,18 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
         let buttons = document.querySelectorAll('#buttons > g, #parts > g'); // QUERYSELECTORALL SELECIONA TODOS OS G`S QUE ESTÃO DENTRO DE BUTTONS
             
-            buttons.forEach((btn, index) => {
-                this.addEventListenerAll(btn, 'click drag', e => {
-                    let textBtn = btn.className.baseVal.replace('btn-','');
+            buttons.forEach((btn, index) => { //FOREACH SIGF PARA CADA, É UM LAÇO PARA PERCORRER OS PARAMETROS
+                this.addEventListenerAll(btn, 'click drag', e => { // MÉTODO PARA MANIPULAR MULTIPLOS EVENTOS
+                    let textBtn = btn.className.baseVal.replace('btn-','');// REPLACE = SUBSTITUA
                     this.execBtn(textBtn);
             });
 
-            this.addEventListenerAll(btn, 'mouseover mouseup mousedown', e => {
+            this.addEventListenerAll(btn, 'mouseover mouseup mousedown', e => { 
                 btn.style.cursor = 'pointer';
             })
 
         });
     }
-
-
 
     setDisplayDateTime(){ //TRABALHANDO COM DATAS 'dir(new Date)' NO CONSOLE TE RETORNA TODAS AS FUNÇÕES
 
