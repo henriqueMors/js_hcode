@@ -261,7 +261,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         this.displayCalc = lastNumber;
     }
 
-    addOperation(value){ 
+    addOperation(value){ //VAI CRIAR A OPERAÇÃO JUNTANDO OS NUMEROS NO DISPLAY
 
         if (isNaN(this.getLastOperation())) {
 
