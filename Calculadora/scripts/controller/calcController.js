@@ -9,7 +9,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         this._audio = new Audio('click.mp3'); //THIS FAZ A REFERENCIA AO OBJETO, É COMO SE FOSSE UM VAR/LET, MAS É UM ATRIBUTO
         this._lastOperator = ''; // O underline É UMA FORMA DE EMCAPSULAMENTO (PRIVATE), PROTEGER OS DADOS
         this._lastNumber = '';
-        this._operation = [];
+        this._operation = []; //É UM ARRAY QUE VAI GUARDAR A OPERAÇÃO
         this._locale = 'pt-BR';
         this._displayCalcEl = document.querySelector('#display'); // QUERYSELECTOR PARA SELECIONAR ITEM COMO O GETELEMENT
         this._dateEl = document.querySelector('#date');
@@ -175,7 +175,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     pushOperation(value){
 
-        this._operation.push(value);
+        this._operation.push(value);//MÉTODO PUSH ADICIONA MAIS UM ARRAY NA ULTIMA POSICAO
 
         if (this._operation.length > 3) {
 
@@ -261,7 +261,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         this.displayCalc = lastNumber;
     }
 
-    addOperation(value){
+    addOperation(value){ 
 
         if (isNaN(this.getLastOperation())) {
 
@@ -294,7 +294,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     }
 
-    setError(){
+    setError(){ // PARA RETORNAR A MSG DE ERRO
 
         this.displayCalc = 'ERROR';
 
@@ -314,13 +314,13 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         this.setLastNumberToDisplay();
     }
 
-    execBtn(value) {
+    execBtn(value) { //VAI SERVIR PARA INFORMAR A FUNÇÃO DE CADA BOTAO
             this.playAudio();
-        switch (value) {
+        switch (value) { //SWITCH ANALISA AS CONDIÇOES E EXCECUTA UM CASO
 
             case 'ac':
                 this.clearAll();
-                break;
+                break; //EXECUTA O CLEARALL E PARA DE RODAR O PROGRAMA
 
             case 'ce':
                 this.clearEntry();
@@ -367,7 +367,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
                 this.addOperation(parseInt(value));
                 break;
 
-            default:
+            default: //SERVE ONDE FORAM EXECUTADOS OS CASOS E NENHUMA CONDIÇÃO FOI ENCONTRADA
                 this.setError();
                 break;
             
