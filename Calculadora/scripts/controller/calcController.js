@@ -76,7 +76,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         }
     }
 
-    initKeyboard() {
+    initKeyboard() { // EVENTO DE ESCUTA / RECOHECIMENTO DE DIGITAÇÃO DE TECLADO 
 
         document.addEventListener('keyup', e=>{
             this.playAudio();
