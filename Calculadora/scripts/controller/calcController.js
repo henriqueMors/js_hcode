@@ -20,7 +20,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         this.initKeyboard();
     }
 
-    pasteFromClipboard() {
+    pasteFromClipboard() { //
 
         document.addEventListener('paste', e => {
             let text = e.clipboardData.getData('Text');
@@ -29,7 +29,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     }
 
-    copyToClipboard(){
+    copyToClipboard(){ //MÉTODO PARA UTILIZAR O COPIA E COLA 
 
         let input = document.createElement('input');
         input.value = this.displayCalc;
@@ -63,12 +63,12 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     // settimeout faz o método parar a partir de um determinado tempo
 
-    toggleAudio(){
+    toggleAudio(){ // FORMA CONDICIONAL PARA AUDIO
 
         this._audioOnOff = !this._audioOnOff
     }
 
-    playAudio(){
+    playAudio(){ // AUDIO A SER TOCADO E O TEMPO ESTIMADO PARA REINICIAR
 
         if (this._audioOnOff) {
             this._audio.currentTime = 0;
@@ -137,7 +137,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         })
     }
 
-    clearAll(){
+    clearAll(){ //FAZ LIMPEZA DA TELA E RETORNA OS VALORES INICIAIS
 
         this._operation = [];
         this._lastNumber = '';
@@ -147,7 +147,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     }
 
-    clearEntry(){
+    clearEntry(){ //FAZ A LIMPEZA DO ULTIMO NUMERO DIGITADO
 
         this._operation.pop();
 
