@@ -20,7 +20,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         this.initKeyboard();
     }
 
-    pasteFromClipboard() { //
+    pasteFromClipboard() { //MÉTODO PARA COLAR         
 
         document.addEventListener('paste', e => {
             let text = e.clipboardData.getData('Text');
@@ -29,7 +29,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     }
 
-    copyToClipboard(){ //MÉTODO PARA UTILIZAR O COPIA E COLA 
+    copyToClipboard(){ //MÉTODO PARA UTILIZAR O COPIA 
 
         let input = document.createElement('input');
         input.value = this.displayCalc;
