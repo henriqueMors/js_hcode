@@ -65,7 +65,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     toggleAudio(){ // FORMA CONDICIONAL PARA AUDIO
 
-        this._audioOnOff = !this._audioOnOff
+        this._audioOnOff = !this._audioOnOff // CONDICIONAL 
     }
 
     playAudio(){ // AUDIO A SER TOCADO E O TEMPO ESTIMADO PARA REINICIAR
@@ -122,7 +122,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
                     break;
 
                 case 'c':
-                    if (e.ctrlKey) this.copyToClipboard();
+                    if (e.ctrlKey) this.copyToClipboard(); // CAS0 O CTRL SEJA ACIONADO
                     break;
                 
             }
