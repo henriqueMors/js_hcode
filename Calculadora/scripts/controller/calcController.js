@@ -155,7 +155,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     }
 
-    getLastOperation() {
+    getLastOperation() { //
 
         return this._operation[this._operation.length - 1];
 
