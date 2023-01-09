@@ -184,7 +184,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         }
     }
 
-    getResult(){
+    getResult(){ 
         try{
         return eval(this._operation.join(''));
         } catch (e) {
@@ -195,7 +195,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         }
     }
 
-    calc(){
+    calc(){ //MÉTODO DE CALCULO JUNTANDO OS ARRAYS 
 
         let last = '';
         this._lastOperator = this.getLastItem();
@@ -267,7 +267,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
             if (this.isOperator(value)) { // CASO OCORRA TROCA DE OPERADOR
 
-                this.setLastOperation(value);
+                this.setLastOperation(value); // ATUALIZA O NUMERO NO DISPLAY CASO ELE NAO SEJA UM OPERADOR
 
             } else {
                 
