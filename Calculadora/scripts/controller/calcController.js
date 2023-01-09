@@ -374,7 +374,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         }
     }
 
-    initButtonsEvents(){
+    initButtonsEvents(){ // EVENTOS DE BOTOES EM TELA
 
         let buttons = document.querySelectorAll('#buttons > g, #parts > g'); // QUERYSELECTORALL SELECIONA TODOS OS G`S QUE ESTÃO DENTRO DE BUTTONS
             
