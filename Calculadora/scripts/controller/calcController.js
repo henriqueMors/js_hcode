@@ -155,21 +155,21 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
 
     }
 
-    getLastOperation() { //
+    getLastOperation() { // BUSCA A ULTIMA OPERAÇÃO COM NUMERO / ULTIMO ITEM DO ARRAY
 
         return this._operation[this._operation.length - 1];
 
     }
 
-    setLastOperation(value){
+    setLastOperation(value){ //CONCATENANDO OS NUMEROS
 
         this._operation[this._operation.length - 1] = value;
 
     }
 
-    isOperator(value) {
+    isOperator(value) { //
 
-        return (['+', '-', '*', '%', '/'].indexOf(value) > - 1);
+        return (['+', '-', '*', '%', '/'].indexOf(value) > - 1); // O INDEX FAZ A VALIDAÇÃO DE OPERADOR
 
     }
 
@@ -184,7 +184,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         }
     }
 
-    getResult(){
+    getResult(){ 
         try{
         return eval(this._operation.join(''));
         } catch (e) {
@@ -195,7 +195,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         }
     }
 
-    calc(){
+    calc(){ //MÉTODO DE CALCULO JUNTANDO OS ARRAYS 
 
         let last = '';
         this._lastOperator = this.getLastItem();
@@ -261,13 +261,13 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
         this.displayCalc = lastNumber;
     }
 
-    addOperation(value){ //VAI CRIAR A OPERAÇÃO JUNTANDO OS NUMEROS NO DISPLAY
+    addOperation(value){ // CONCATENANDO NUMEROS E VALIDANDO NAN
 
         if (isNaN(this.getLastOperation())) {
 
-            if (this.isOperator(value)) {
+            if (this.isOperator(value)) { // CASO OCORRA TROCA DE OPERADOR
 
-                this.setLastOperation(value);
+                this.setLastOperation(value); // ATUALIZA O NUMERO NO DISPLAY CASO ELE NAO SEJA UM OPERADOR
 
             } else {
                 
