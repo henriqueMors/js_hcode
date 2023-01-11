@@ -364,7 +364,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
             case '7':
             case '8':
             case '9':
-                this.addOperation(parseInt(value));
+                this.addOperation(parseInt(value)); //
                 break;
 
             default: //SERVE ONDE FORAM EXECUTADOS OS CASOS E NENHUMA CONDIÇÃO FOI ENCONTRADA
