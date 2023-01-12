@@ -384,7 +384,7 @@ class CalcController { //PRIMEIRA LETRA DA CLASSE SEMPRE MAIUSCULA - PASCAL CASE
                     this.execBtn(textBtn);
             });
 
-            this.addEventListenerAll(btn, 'mouseover mouseup mousedown', e => { 
+            this.addEventListenerAll(btn, 'mouseover mouseup mousedown', e => { // ESCUTA EVENTOS DE MOUSE
                 btn.style.cursor = 'pointer';
             })
 
