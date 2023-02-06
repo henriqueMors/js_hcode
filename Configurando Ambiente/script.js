@@ -11,7 +11,7 @@ var photo = document.querySelector('#exampleInputFile')
 var admin = document.querySelector('#exampleInputAdmin')
 
 var fields = document.querySelectorAll('#form-user-create [name]')
-fields.forEach(function(fields, index){ //foreach PERCORRE CAMPOS DE UM OBJETO / EXECUTAR UMA FUNCAO PARA CADA ITEM
+fields.forEach(function(field, index){ //forEach PERCORRE CAMPOS DE UM OBJETO / EXECUTAR UMA FUNCAO PARA CADA ITEM
 
     if (field.name == 'gender') {
 
