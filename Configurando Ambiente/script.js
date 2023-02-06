@@ -16,7 +16,7 @@ fields.forEach(function(field, index){ //forEach PERCORRE CAMPOS DE UM OBJETO / 
     if (field.name == 'gender') {
 
         if (field.checked) {
-            console.log('sim, field')
+            console.log('sim', field);
         }
     } else {
         console.log('nao')
