@@ -7,9 +7,23 @@ class UserController {
 
     }
 
+    onSubmit(){
+
+
+        this.formEl.addEventListener("submit", event => {
+    
+            event.preventDefault();
+
+            this.getValues();
+          
+        });        
+    }
+
     getValues() {
 
-        fields.forEach(function(field, index){ //forEach PERCORRE CAMPOS DE UM OBJETO / EXECUTAR UMA FUNCAO PARA CADA ITEM
+        let user = {};
+
+        this.formEl.elements.forEach(function(field, index){ //forEach PERCORRE CAMPOS DE UM OBJETO / EXECUTAR UMA FUNCAO PARA CADA ITEM
 
             if (field.name == 'gender') {
         
@@ -21,19 +35,16 @@ class UserController {
             }
         });
     
-        var objectUser = new User(
-                                    user.name, 
-                                    user.gender, 
-                                    user.country, 
-                                    user.birth, 
-                                    user.email, 
-                                    user.password, 
-                                    user.photo, 
-                                    user.admin
-                                );
-    
-        addLine(objectUser);
-
+        return new User (
+                        user.name, 
+                        user.gender, 
+                        user.country, 
+                        user.birth, 
+                        user.email, 
+                        user.password, 
+                        user.photo, 
+                        user.admin
+                        );
     }
 
 }
